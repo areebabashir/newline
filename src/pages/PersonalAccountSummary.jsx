@@ -178,7 +178,7 @@ const PersonalAccountSummary = () => {
     columnHelper.accessor('name', {
       header: 'Name',
       cell: (info) => (
-        <span className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 cursor-pointer text-sm">
+        <span className="text-yellow-600 dark:text-yellow-400 font-medium hover:text-yellow-800 dark:hover:text-yellow-300 cursor-pointer text-sm">
           {info.getValue()}
         </span>
       ),
@@ -218,7 +218,7 @@ const PersonalAccountSummary = () => {
         <div className="flex items-center gap-1">
           <button
             onClick={() => handleEdit(row.original.id)}
-            className="p-1.5 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded transition-colors duration-150"
+            className="p-1.5 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 rounded transition-colors duration-150"
             title="Edit Account"
           >
             <Edit size={14} />
@@ -369,7 +369,7 @@ const PersonalAccountSummary = () => {
             </div>
             <button
               onClick={handleAddAccount}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 dark:bg-blue-700 dark:hover:bg-blue-800"
+              className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 dark:bg-yellow-700 dark:hover:bg-yellow-800"
             >
               <Plus size={20} />
               Add Account
@@ -726,11 +726,11 @@ const PersonalAccountSummary = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="px-6 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white rounded-lg font-medium text-sm transition-colors flex items-center gap-2 disabled:cursor-not-allowed"
+                  className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 disabled:bg-yellow-400 text-black rounded-lg font-medium text-sm transition-colors flex items-center gap-2 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <>
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <div className="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin"></div>
                       Creating...
                     </>
                   ) : (

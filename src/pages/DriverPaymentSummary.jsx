@@ -133,7 +133,7 @@ const DriverPaymentSummary = () => {
       header: 'Driver Name',
       cell: (info) => (
         <div>
-          <span className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 cursor-pointer block">
+          <span className="text-yellow-600 dark:text-yellow-400 font-medium hover:text-yellow-800 dark:hover:text-yellow-300 cursor-pointer block">
             {info.getValue()}
           </span>
           <span className="text-gray-500 dark:text-gray-400 text-sm">
@@ -148,7 +148,7 @@ const DriverPaymentSummary = () => {
     }),
     columnHelper.accessor('paidAmount', {
       header: 'Paid Amount',
-      cell: (info) => <span className="text-blue-600 dark:text-blue-400 font-medium">{info.getValue()}</span>,
+      cell: (info) => <span className="text-yellow-600 dark:text-yellow-400 font-medium">{info.getValue()}</span>,
     }),
     columnHelper.accessor('pendingAmount', {
       header: 'Pending Amount',
@@ -195,14 +195,14 @@ const DriverPaymentSummary = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={() => handleViewStatement(row.original.id)}
-            className="p-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors duration-150"
+            className="p-2 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 rounded-lg transition-colors duration-150"
             title="View Statement"
           >
             <FileText size={16} />
           </button>
           <button
             onClick={() => handleEdit(row.original.id)}
-            className="p-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg transition-colors duration-150"
+            className="p-2 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 rounded-lg transition-colors duration-150"
             title="Edit Payment"
           >
             <Edit size={16} />
@@ -318,14 +318,14 @@ const DriverPaymentSummary = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={handleSendStatement}
-                className="bg-white hover:bg-blue-600 text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 dark:bg-blue-700 dark:hover:bg-blue-800"
+                className="bg-white hover:bg-yellow-600 text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 dark:bg-yellow-700 dark:hover:bg-yellow-800"
               >
                 <FileText size={20} />
                 Send Statement
               </button>
               <button
                 onClick={handleAddPayment}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 dark:bg-blue-700 dark:hover:bg-blue-800"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 dark:bg-yellow-700 dark:hover:bg-yellow-800"
               >
                 <Plus size={20} />
                 Add Payment
@@ -467,7 +467,7 @@ const DriverPaymentSummary = () => {
 
   <button
     type="submit"
-    className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-medium transition-all"
+    className="w-full bg-yellow-500 hover:bg-yellow-600 text-black py-2 rounded-lg font-medium transition-all"
   >
     Add Payment
   </button>

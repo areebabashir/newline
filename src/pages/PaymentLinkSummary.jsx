@@ -279,7 +279,7 @@ const PaymentLinkSummary = () => {
             </div>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105"
+              className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg transition-all duration-200 hover:scale-105 dark:bg-yellow-700 dark:hover:bg-yellow-800"
             >
               <Plus size={20} />
               CREATE PAYMENT LINK

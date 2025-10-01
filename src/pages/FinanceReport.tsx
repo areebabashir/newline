@@ -203,11 +203,11 @@ const FinanceReport = () => {
     }),
     columnHelper.accessor('booker', {
       header: 'Booker',
-      cell: (info) => <span className="text-gray-700 dark:text-gray-300">{info.getValue()}</span>,
+      cell: (info) => <span className="text-gray-700 dark:text-gray-300 truncate block max-w-[120px]">{info.getValue()}</span>,
     }),
     columnHelper.accessor('passenger', {
       header: 'Passenger',
-      cell: (info) => <span className="text-gray-700 dark:text-gray-300">{info.getValue()}</span>,
+      cell: (info) => <span className="text-gray-700 dark:text-gray-300 truncate block max-w-[120px]">{info.getValue()}</span>,
     }),
     columnHelper.accessor('date', {
       header: 'Date',
@@ -219,23 +219,23 @@ const FinanceReport = () => {
     }),
     columnHelper.accessor('pickup', {
       header: 'Pickup',
-      cell: (info) => <span className="text-gray-700 dark:text-gray-300 text-sm max-w-xs truncate">{info.getValue()}</span>,
+      cell: (info) => <span className="text-gray-700 dark:text-gray-300 text-sm truncate block max-w-[150px]">{info.getValue()}</span>,
     }),
     columnHelper.accessor('dropoff', {
       header: 'Dropoff',
-      cell: (info) => <span className="text-gray-700 dark:text-gray-300 text-sm max-w-xs truncate">{info.getValue()}</span>,
+      cell: (info) => <span className="text-gray-700 dark:text-gray-300 text-sm truncate block max-w-[150px]">{info.getValue()}</span>,
     }),
     columnHelper.accessor('driver', {
       header: 'Driver',
-      cell: (info) => <span className="text-gray-700 dark:text-gray-300">{info.getValue()}</span>,
+      cell: (info) => <span className="text-gray-700 dark:text-gray-300 truncate block max-w-[120px]">{info.getValue()}</span>,
     }),
     columnHelper.accessor('vehicle', {
       header: 'Vehicle',
-      cell: (info) => <span className="text-gray-700 dark:text-gray-300">{info.getValue()}</span>,
+      cell: (info) => <span className="text-gray-700 dark:text-gray-300 truncate block max-w-[120px]">{info.getValue()}</span>,
     }),
     columnHelper.accessor('accountName', {
       header: 'Account Name',
-      cell: (info) => <span className="text-yellow-600 dark:text-yellow-400 font-medium">{info.getValue()}</span>,
+      cell: (info) => <span className="text-yellow-600 dark:text-yellow-400 font-medium truncate block max-w-[140px]">{info.getValue()}</span>,
     }),
     columnHelper.accessor('revenue', {
       header: 'Revenue',
@@ -560,9 +560,9 @@ const FinanceReport = () => {
               </div>
             </div>
           </div>
-          <div className="overflow-x-auto scrollbar-hide max-w-full">
-            <div className="max-h-96 overflow-y-auto hover:overflow-y-auto transition-all duration-300">
-              <table className="w-full min-w-max table-fixed">
+          <div className="overflow-x-hidden scrollbar-hide max-w-full">
+            <div className="max-h-96 overflow-y-auto overflow-x-hidden hover:overflow-y-auto transition-all duration-300">
+              <table className="w-full min-w-[1600px] table-fixed">
                 <thead className="bg-gray-50 dark:bg-gray-700 sticky top-0 z-10 border-b border-gray-200 dark:border-gray-700">
                   {table.getHeaderGroups().map((headerGroup) => (
                     <tr key={headerGroup.id}>

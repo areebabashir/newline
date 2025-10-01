@@ -108,7 +108,7 @@ const PaymentLinkSummary = () => {
     columnHelper.accessor("accountName", {
       header: "Account Name",
       cell: (info) => (
-        <span className="text-gray-700 dark:text-gray-300">
+        <span className="text-gray-700 dark:text-gray-300 truncate block max-w-[150px]" title={info.getValue()}>
           {info.getValue()}
         </span>
       ),
@@ -116,7 +116,7 @@ const PaymentLinkSummary = () => {
     columnHelper.accessor("customerName", {
       header: "Customer Name",
       cell: (info) => (
-        <span className="text-gray-700 dark:text-gray-300">
+        <span className="text-gray-700 dark:text-gray-300 truncate block max-w-[150px]" title={info.getValue()}>
           {info.getValue()}
         </span>
       ),
@@ -124,7 +124,7 @@ const PaymentLinkSummary = () => {
     columnHelper.accessor("jobNo", {
       header: "Job No.",
       cell: (info) => (
-        <span className="text-gray-700 dark:text-gray-300">
+        <span className="text-gray-700 dark:text-gray-300 truncate block max-w-[120px]" title={info.getValue()}>
           {info.getValue()}
         </span>
       ),
@@ -132,7 +132,7 @@ const PaymentLinkSummary = () => {
     columnHelper.accessor("remarks", {
       header: "Remarks",
       cell: (info) => (
-        <span className="text-gray-700 dark:text-gray-300">
+        <span className="text-gray-700 dark:text-gray-300 truncate block max-w-[180px]" title={info.getValue()}>
           {info.getValue()}
         </span>
       ),
@@ -459,8 +459,8 @@ const PaymentLinkSummary = () => {
           </div>
 
           <div className="overflow-x-auto scrollbar-hide max-w-full">
-            <div className="max-h-96 overflow-y-auto hover:overflow-y-auto transition-all duration-300">
-              <table className="w-full min-w-max table-fixed">
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[1400px] table-fixed">
                 <thead className="bg-gray-50 dark:bg-gray-700 sticky top-0 z-10">
                   {table.getHeaderGroups().map((headerGroup) => (
                     <tr key={headerGroup.id}>

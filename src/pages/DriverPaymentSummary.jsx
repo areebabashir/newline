@@ -132,11 +132,11 @@ const DriverPaymentSummary = () => {
     columnHelper.accessor('driverName', {
       header: 'Driver Name',
       cell: (info) => (
-        <div>
-          <span className="text-yellow-600 dark:text-yellow-400 font-medium hover:text-yellow-800 dark:hover:text-yellow-300 cursor-pointer block">
+        <div className="max-w-[150px]">
+          <span className="text-yellow-600 dark:text-yellow-400 font-medium hover:text-yellow-800 dark:hover:text-yellow-300 cursor-pointer block truncate" title={info.getValue()}>
             {info.getValue()}
           </span>
-          <span className="text-gray-500 dark:text-gray-400 text-sm">
+          <span className="text-gray-500 dark:text-gray-400 text-sm truncate block" title={info.row.original.driverId}>
             {info.row.original.driverId}
           </span>
         </div>
@@ -542,8 +542,8 @@ const DriverPaymentSummary = () => {
         </div>
 
         {/* Table Container */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden flex-1 flex flex-col min-h-0">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700 flex-shrink-0">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
             <div className="flex justify-between items-center">
               <div>
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Payment List</h2>
@@ -571,8 +571,8 @@ const DriverPaymentSummary = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 overflow-auto min-h-0">
-            <table className="w-full">
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[1400px]">
                 <thead className="bg-gray-50 dark:bg-gray-700 sticky top-0 z-10">
                   {table.getHeaderGroups().map((headerGroup) => (
                     <tr key={headerGroup.id}>
@@ -623,7 +623,7 @@ const DriverPaymentSummary = () => {
                 </tbody>
               </table>
           </div>
-          <div className="p-4 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between flex-shrink-0">
+          <div className="p-4 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
             <div className="text-sm text-gray-700 dark:text-gray-300">
               Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
             </div>

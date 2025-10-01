@@ -301,8 +301,8 @@ const CorporateAccountSummary = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto p-6 space-y-6">
+    <div className="h-full flex flex-col bg-gray-50 dark:bg-gray-900">
+      <div className="flex-1 flex flex-col max-w-7xl mx-auto w-full p-6 space-y-6 min-h-0">
         {/* Header Container */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6">
           <div className="flex justify-between items-center">
@@ -321,7 +321,7 @@ const CorporateAccountSummary = () => {
         </div>
 
         {/* Filters Container */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 flex-shrink-0">
           <div className="flex flex-wrap gap-4 items-center justify-between">
             <div className="flex gap-4 items-center flex-1 min-w-0">
               <div className="relative flex-1 max-w-md">
@@ -382,8 +382,8 @@ const CorporateAccountSummary = () => {
         </div>
 
         {/* Table Container */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden flex-1 flex flex-col min-h-0">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-700 flex-shrink-0">
             <div className="flex justify-between items-center">
               <div>
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Account List</h2>
@@ -411,9 +411,8 @@ const CorporateAccountSummary = () => {
               </div>
             </div>
           </div>
-          <div className="overflow-x-auto">
-            <div className="max-h-96 overflow-y-auto hover:overflow-y-auto transition-all duration-300">
-              <table className="w-full">
+          <div className="flex-1 overflow-auto min-h-0">
+            <table className="w-full">
                 <thead className="bg-gray-50 dark:bg-gray-700 sticky top-0 z-10">
                   {table.getHeaderGroups().map((headerGroup) => (
                     <tr key={headerGroup.id}>
@@ -464,9 +463,8 @@ const CorporateAccountSummary = () => {
                   ))}
                 </tbody>
               </table>
-            </div>
           </div>
-          <div className="p-4 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
+          <div className="p-4 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between flex-shrink-0">
             <div className="text-sm text-gray-700 dark:text-gray-300">
               Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
             </div>

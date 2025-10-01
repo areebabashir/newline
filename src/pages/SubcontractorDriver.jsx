@@ -516,8 +516,7 @@ const SubcontractorDriver = () => {
               </div>
             </div>
             <div className="overflow-x-auto">
-              <div className="max-h-96 overflow-y-auto hover:overflow-y-auto transition-all duration-300">
-                <table className="w-full">
+              <table className="w-full">
                   <thead className="bg-gray-50 dark:bg-gray-700 sticky top-0 z-10">
                     {table.getHeaderGroups().map((headerGroup) => (
                       <tr key={headerGroup.id}>
@@ -573,7 +572,6 @@ const SubcontractorDriver = () => {
                     ))}
                   </tbody>
                 </table>
-              </div>
             </div>
             <div className="p-4 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
               <div className="text-sm text-gray-700 dark:text-gray-300">

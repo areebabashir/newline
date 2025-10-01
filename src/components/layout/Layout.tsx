@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div 
-      className="flex min-h-screen w-full bg-background"
+      className="flex h-screen w-full bg-background overflow-hidden"
       style={{ '--sidebar-width': `${sidebarWidth}px` } as React.CSSProperties}
     >
       <Sidebar />
@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Main content area */}
       <div
         className={cn(
-          "flex-1 flex flex-col transition-all duration-300",
+          "flex-1 flex flex-col transition-all duration-300 overflow-hidden",
           sidebarOpen && "md:ml-[var(--sidebar-width)]",
           !sidebarOpen && "ml-0"
         )}
@@ -35,10 +35,8 @@ const Layout = ({ children }: LayoutProps) => {
         <TopBar />
         
         {/* Page content */}
-        <main className="flex-1 overflow-auto">
-          <div className="px-4 py-6 md:px-2 md:py-4 lg:px-1 lg:py-6">
-            {children}
-          </div>
+        <main className="flex-1 overflow-y-auto overflow-x-hidden">
+          {children}
         </main>
       </div>
     </div>
